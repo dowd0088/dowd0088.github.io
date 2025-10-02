@@ -20,13 +20,13 @@ ul {
 
 }
 
-a {
+nav a {
     text-decoration: none;
     background-color: rgb(155, 222, 222);
     border: 2px solid blue;
 }
 
-a:hover {
+nav a:hover {
     background-color: rgb(194, 180, 206);
 }
 
