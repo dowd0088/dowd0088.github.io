@@ -23,12 +23,11 @@ ul {
 a {
     text-decoration: none;
     background-color: rgb(155, 222, 222);
-    border: 1px black;
-    padding: 5px;
+    border: 2px solid blue;
 }
 
 a:hover {
-    background-color: rgb(158, 143, 171);
+    background-color: rgb(194, 180, 206);
 }
 
 
