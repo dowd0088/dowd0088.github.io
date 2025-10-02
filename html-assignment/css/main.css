@@ -6,3 +6,7 @@ body{
 header, footer{
     background-color: rgb(149, 204, 204);
 }
+
+.site-title{
+    color: rgb(20, 91, 91);
+}
