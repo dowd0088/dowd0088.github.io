@@ -7,10 +7,12 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+    <!-- The wrapper controls everything in the body instead of me having to individualy change everything -->
     <div class="wrapper">
-    <header class="head">
+    <header id="banner">
         <img src="images/lone-starfish-wide.jpg" alt="Lone starfish wide" class="widestarfish">
     <h1>Lone Starfish</h1>
+    <!-- This is the navigation for the links -->
     <nav>
         <ul>
             <li><a href="#">HOME</a></li>
@@ -37,9 +39,11 @@
             </ul>
         </section>
 
+        <!-- The form contains labels to fill out and buttons for both the options and 'SUBMIT' -->
         <section class="contact">
             <h3>Contact to learn more</h3>
             <form>
+                <fieldset>
                 <label>Your Name</label><br>
                 <input type="text" name="name"><br><br>
 
@@ -55,6 +59,7 @@
                 <input type="radio" name="visit" value="maybe"> Maybe<br><br>
 
                 <button type="submit">SEND</button>
+                </fieldset>
             </form>
         </section>
 
