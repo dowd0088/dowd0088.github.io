@@ -8,7 +8,7 @@ body{
 /* This is for the main page, it overrights the background image */
 .wrapper{
     background-color: #d4e9e7;
-    width: 40%;
+    width: 53.8%;
     margin: 0 auto;
 }
 
@@ -23,6 +23,13 @@ header{
     position: absolute;
     top: 195px;
     left: 42%
+}
+
+#banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* This section is for alligning the navigation to be side-by-side and at the top. I also got rid of the text decoration and set the colour to black */
