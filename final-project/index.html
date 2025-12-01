@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>HTML Mockup</title>
 </head>
@@ -18,20 +21,21 @@
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <form action="">
+            <form action="example.com" method="post">
                 <label class="searchbar">Search</label>
                 <input type ="text">
             </form>
         </nav>
+        </header>
         </div>
-    </header>
+    
         
     <main>
         <section id="home" class="mainsection">
             <img src="images/main-banner.jpg" alt="banner">
                 <h1>Welcome to Three Star Media</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde inventore, non voluptatum quasi accusamus ea fuga officiis, ipsam, numquam iste rerum aliquam? Enim similique porro fugit. Quos reprehenderit ipsam fugiat.</p>
-                <a href="#connect" class="connect">Connect with us</a>
+                <button>Connect with us</button>
         </section>
 
         <section id="about" class="aboutus">
@@ -47,32 +51,33 @@
                 <img src="images/digital.jpg" alt="devices">
                 <h3>Digital Transformation</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt molestiae suscipit iure eaque cumque commodi doloremque. At quae maxime rem excepturi perspiciatis quasi fuga eligendi. Repellendus consectetur aliquam ut optio!</p>
-                <a href="#digitalplans">Digital Plans</a>
+                <button>Digital Plans</button>
             </div>
             <div class="service">
                 <img src="images/marketing.jpg" alt="laptop">
                 <h3>Marketing</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quas repudiandae! Quae sunt reprehenderit labore, est delectus perferendis qui tempore dignissimos numquam iusto quibusdam vero! Sint cupiditate quisquam natus quod!</p>
-                <a href="#marketingplans">Marketing Plans</a>
+                <button>Marketing Plans</button>
             </div>
             <div class="service">
                 <img src="images/video.jpg" alt="phone">
                 <h3>Web Development</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem totam rerum incidunt nihil quas quia odio, temporibus voluptatibus nostrum quam corporis, deserunt esse eos sunt reiciendis, sint atque repellendus aperiam.</p>
-                <a href="#webplans">Web Plans</a>
+                <button>Web Plans</button>
             </div>
             <div class="service">
-                <img src="images/print.jpg">
+                <img src="images/print.jpg" alt="print">
                 <h3>Print</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa esse distinctio dolores dicta mollitia, adipisci vel, autem earum fugiat inventore accusantium blanditiis harum obcaecati nostrum eaque. Vel quis placeat ipsum.</p>
-                <a href="#printplans">Print Plans</a>
+                <button>Print Plans</button>
             </div>
         </section>
 
         <section id="vision" class="visionstatement">
+            <img src="images/vision.jpg" alt="vision">
             <h2>Our Vision</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptate architecto asperiores fuga nulla, distinctio et laboriosam cum suscipit tenetur itaque dolores libero eius modi sapiente explicabo incidunt? Accusantium, quisquam?</p>
-            <a href="#learnmore">Learn More</a>
+            <button>Learn More</button>
         </section>
 
         <section>
@@ -100,38 +105,33 @@
                 <textarea name="message" placeholder="Your Message"></textarea>
                 <input type="submit" value="Send" class="submit">
             </form>
-        </section>
-
-        <section class="openhours">
-            <h3>Hours of operation</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Days</th>
-                        <th>Hours</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday - Friday</td>
-                        <td>9 AM - 6 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday - Sunday</td>
-                        <td>Closed</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
 
         <section class="location">
             <h3>Location</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.9503602618324!2d-75.75533349999999!3d45.3498143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1764569269121!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
+
+        <h3>Hours of Operation</h3>
+            <table class="hours">
+         <tr>
+            <th>Days</th>
+            <th>Hours</th>
+        </tr>
+        <tr>
+            <td>Monday - Friday</td>
+            <td>9 AM - 6 PM</td>
+        </tr>
+        <tr>
+            <td>Saturday - Sunday</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+    </section>
+
     </main>
 
     <footer>
-        <p>Copyright Three Star Media, 2020</p>
+        <p>© Copyright Three Star Media, 2020</p>
         <p>All images are taken from Unsplash</p>
     </footer>
 </body>
