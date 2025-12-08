@@ -3,73 +3,632 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* open hours table */
-
-.hours {
-    width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    border-spacing: 0;
 }
 
-.hours th {
-    background-color: #ffe6ac;
+@media (min-width: 768px) {
+
+    /* nav spacing */
+
+    .navigationbar ul {
+        gap: 40px;
+    }
+
+    /* about section */
+
+    .aboutus {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    /* services as grid */
+
+    .serviceselection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .serviceselection h2 {
+        grid-column: 1 / -1;
+    }
+
+    /* team members to be beside each other */
+
+    section>.teammember {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 20px;
+    }
+
+    /* contact layout */
+
+    .contactussection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .location {
+        grid-column: 2;
+    }
 }
 
-.hours th, .hours td {
-    border: 1px solid black;
-    padding: 10px;
+/* desktop  */
+
+@media (min-width: 1200px) {
+    #home img {
+        height: 500px;
+    }
+
+    .visionstatement img {
+        height: 350px;
+    }
 }
 
-/* footer  */
+/* for the web version, main css */
 
-footer {
-    background: #222222;
-    color: #815e14;
+/* ========= GLOBAL ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #fff;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* header */
+
+header {
+    background: #2b2b2b;
+    padding: 10px 0;
+}
+
+.navigationbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigationbar img {
+    width: 60px;
+}
+
+.navigationbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navigationbar a {
+    color: #cfa64d;
+    text-decoration: none;
+}
+
+.navigationbar form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navigationbar input {
+    padding: 5px;
+}
+
+
+/* home section */
+
+#home {
+    position: relative;
+    width: 100%;
+}
+
+.coolthing img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* main section */
+
+.mainsection {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Dark gray overlay */
+.othercoolthing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 140px;
     text-align: left;
+}
+
+
+.othercoolthing:nth-child(2) {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    float: left
+}
+
+.othercoolthing p {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    float: left
+}
+
+
+
+/* Button styling */
+.othercoolthing:nth-child(2) button {
+    background-color: #cfa64d;
+    border: none;
+    padding: 12px 25px;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+/* about section */
+
+.aboutus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    background: #f6df9b;
+    padding: 40px 5%;
+}
+
+.aboutus h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.aboutus:nth-child(2) {
+    display: flex;
+    justify-content: center
+}
+
+
+/* ========= SERVICES ========= */
+
+.serviceselection {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.serviceselection h2 {
+    margin-bottom: 20px;
+}
+
+.service {
+    background: #f6df9b;
     padding: 20px;
-    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.service img {
+    margin-bottom: 10px;
+}
+
+.service button {
+    background: #222;
+    border: none;
+    padding: 20px 16px;
+    color: white;
+    margin-top: 10px;
+
+}
+
+/* Desktop layout */
+@media (min-width: 900px) {
+    .serviceselection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .serviceselection h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/*vision section */
+
+.visionstatement {
+    position: relative;
+    margin-top: 30px;
+}
+
+.visionstatement img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.visionstatement h2,
+.visionstatement p,
+.visionstatement button {
+    position: absolute;
+    left: 50px;
+    color: white;
+}
+
+.visionstatement h2 {
+    top: 70px;
+    font-size: 2rem;
+}
+
+.visionstatement p {
+    top: 130px;
+    max-width: 500px;
+}
+
+.visionstatement button {
+    top: 230px;
+    background: #c29b32;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+}
+
+
+/* our team section */
+
+.teamsection {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+    ;
+}
+
+/* for the mobile layout */
+
+.teammember {
+    background: #f6df9b;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.teammember img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.teaminfo h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.teaminfo h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.teaminfo p {
+    line-height: 1.5;
+}
+
+/* for desktop devices */
+@media (min-width: 900px) {
+    .teammember {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 25px;
+        align-items: start;
+        padding: 30px;
+    }
+
+    .teammember img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+/* contact us section */
+
+.contactussection {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+#contactform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;;
+}
+
+#contactform input,
+#contactform textarea {
+    padding: 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+#contactform label {
+    font-weight: 600;
+}
+
+.submit {
+    background: #c29b32;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* contact form for desktop */
+@media (min-width: 900px) {
+
+    .contactussection {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr; 
+        gap: 40px;
+        align-items: start;
+    }
+
+    .contactpleaseomg {
+        grid-column: 1;
+    }
+
+    .location {
+        grid-column: 2;
+    }
+
+    .location iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+    }
+}
+
+/* Two-column layout on desktop */
+@media (min-width: 900px) {
+    .contactussection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+
+    /* location section */
+
+    .location {
+        grid-column: 2;
+        margin-top: 0;
+    }
+
+    .location iframe {
+        width: 100%;
+        height: 500px;
+    }
+
+
+    /* hours of operation */
+
+    .hours {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .hours th,
+    .hours td {
+        border: 1px solid #ccc;
+        padding: 10px;
+
+    }
+
+
+    /* footer */
+
+    footer {
+        background: #2b2b2b;
+        color: #cfa64d;
+        text-align: left;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+
+    /* changes for mobile devices */
+
+    @media (max-width: 768px) {
+
+        /* grey box for the mobil version*/
+        .othercoolthing {
+            left: 20px;
+            right: 20px;
+            transform: translateY(-50%);
+            padding: 25px;
+        }
+
+        .othercoolthing h1 {
+            font-size: 2rem;
+        }
+
+        /* about section on the mobile version */
+        .aboutus {
+            grid-template-columns: 1fr;
+        }
+
+        /* vision section for the mobile version */
+        .visionstatement h2,
+        .visionstatement p,
+        .visionstatement button {
+            left: 20px;
+        }
+    }
 }
